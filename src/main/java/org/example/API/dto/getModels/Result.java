@@ -1,11 +1,11 @@
 package org.example.API.dto.getModels;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
 import java.util.List;
 
 import static lombok.AccessLevel.PRIVATE;

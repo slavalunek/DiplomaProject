@@ -1,6 +1,7 @@
 package org.example.UI.pages;
 
 import lombok.extern.log4j.Log4j2;
+import org.example.UI.utils.PropertiesLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.Properties;
 
 @Log4j2
 public class LoginPage extends BasePage{
@@ -41,7 +44,8 @@ public class LoginPage extends BasePage{
     }
 
     public LoginPage open() {
-        driver.get(baseUrl);
+        Properties properties = PropertiesLoader.loadProperties();
+        driver.get(properties.getProperty("base.url") + LOGIN_REDIRECT_PATH_2_F);
         return this;
     }
 

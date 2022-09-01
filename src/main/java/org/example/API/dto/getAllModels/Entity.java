@@ -1,9 +1,12 @@
 package org.example.API.dto.getAllModels;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 import static lombok.AccessLevel.PRIVATE;
 
@@ -19,6 +22,6 @@ public class Entity {
     public int cases_count;
     public String created;
     public String updated;
-    public String created_at;
-    public String updated_at;
+    public Date created_at;
+    public Date updated_at;
 }

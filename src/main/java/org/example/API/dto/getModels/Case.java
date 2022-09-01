@@ -1,5 +1,6 @@
 package org.example.API.dto.getModels;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +13,6 @@ import static lombok.AccessLevel.PRIVATE;
 @NoArgsConstructor
 @Builder
 public class Case {
-
     public int case_id;
     public Object assignee_id;
 }

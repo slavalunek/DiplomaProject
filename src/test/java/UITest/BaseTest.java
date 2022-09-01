@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.UI.pages.CreateTestPlanPage;
 import org.example.UI.pages.LoginPage;
 import org.example.UI.pages.ProjectPage;
+import org.example.UI.pages.TestPlansPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,6 +23,7 @@ public class BaseTest {
     LoginPage loginPage;
     ProjectPage projectPage;
     CreateTestPlanPage createTestPlanPage;
+    TestPlansPage testPlansPage;
 
     @BeforeMethod()
     public void setUp() {
@@ -38,6 +40,7 @@ public class BaseTest {
         loginPage = new LoginPage(driver);
         projectPage = new ProjectPage(driver);
         createTestPlanPage = new CreateTestPlanPage(driver);
+        testPlansPage = new TestPlansPage(driver);
     }
 
    // @AfterMethod(alwaysRun = true)

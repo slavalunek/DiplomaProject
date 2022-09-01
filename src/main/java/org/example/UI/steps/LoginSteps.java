@@ -23,7 +23,7 @@ public class LoginSteps {
     public void loginStandardUser() {
         Properties properties = PropertiesLoader.loadProperties();
         new LoginPage(driver).open()
-                             .fillInUserName(properties.getProperty("username"))
+                             .fillInUserName(properties.getProperty("email"))
                              .fillInPassword(properties.getProperty("password"))
                              .submitForm();
         Assert.assertTrue(projectPage.isProjectPageOpened(), "the user is not logged in");
