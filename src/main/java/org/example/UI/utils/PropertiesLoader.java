@@ -16,9 +16,9 @@ public class PropertiesLoader {
 
         try (InputStream input = PropertiesLoader.class.getClassLoader().getResourceAsStream(fileName)) {
             properties.load(input);
-            log.info("  {}", fileName);
+            log.info("Properties file \"{}\" was read successfully", fileName);
         } catch (IOException ex) {
-            log.error("  {}", fileName, ex.getCause());
+            log.error("Properties file \"{}\" was not read! \nError: {}", fileName, ex.getCause());
         }
         return properties;
     }

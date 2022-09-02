@@ -19,9 +19,12 @@ public class Entity {
     public int id;
     public String title;
     public String description;
-    public int cases_count;
+    @SerializedName("cases_count")
+    public int casesCount;
     public String created;
     public String updated;
-    public Date created_at;
-    public Date updated_at;
+    @SerializedName("created_at")
+    public Date createdAt;
+    @SerializedName("updated_at")
+    public Date updatedAt;
 }

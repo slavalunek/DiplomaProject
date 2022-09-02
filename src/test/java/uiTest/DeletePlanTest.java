@@ -1,4 +1,4 @@
-package UITest;
+package uiTest;
 
 import com.github.javafaker.Faker;
 import org.example.UI.pages.*;
@@ -23,7 +23,6 @@ public class DeletePlanTest extends BaseTest{
 
     @Test
     public void deletePlan() {
-
        new TestPlansPage(driver).clickOnDropdown(title)
                                 .choosingAnAction(DELETE)
                                 .clickOnDeletePlan();

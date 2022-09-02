@@ -1,4 +1,4 @@
-package UITest;
+package uiTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.UI.pages.CreateTestPlanPage;
@@ -43,10 +43,10 @@ public class BaseTest {
         testPlansPage = new TestPlansPage(driver);
     }
 
-   // @AfterMethod(alwaysRun = true)
-   // public void tearDown() {
-   //     if (driver != null) {
-   //         driver.quit();
-   //     }
-   // }
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }

@@ -1,10 +1,9 @@
-package UITest;
+package uiTest;
 
 import com.github.javafaker.Faker;
 import org.example.UI.dto.Plan;
 import org.example.UI.pages.NewPlanModel;
 import org.example.UI.pages.PlanDetailsPage;
-import org.example.UI.pages.SelectTestCasesPage;
 import org.example.UI.pages.TestPlansPage;
 import org.example.UI.steps.LoginSteps;
 import org.example.UI.steps.PlanSteps;
@@ -15,7 +14,6 @@ import org.testng.annotations.Test;
 import static org.example.UI.pages.BasePage.DELETE;
 import static org.example.UI.pages.BasePage.EDITE;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 public class EditPlanTest extends BaseTest {
 

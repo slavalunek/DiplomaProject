@@ -1,4 +1,4 @@
-package UITest;
+package uiTest;
 
 import org.example.UI.pages.NewPlanModel;
 import org.example.UI.pages.SelectTestCasesPage;

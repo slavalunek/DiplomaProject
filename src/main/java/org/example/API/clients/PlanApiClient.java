@@ -1,5 +1,6 @@
 package org.example.API.clients;
 
+import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
 import org.example.API.dto.getAllModels.ResponseEndpointAllGet;
 import org.example.API.dto.getModels.ResponseEndpointGet;
@@ -22,7 +23,7 @@ public class PlanApiClient extends BaseApiClient {
                        .statusCode(200)
                        .extract()
                        .body()
-                       .as(ResponseEndpointPost.class);
+                       .as(ResponseEndpointPost.class, ObjectMapperType.GSON);
     }
 
     public ResponseEndpointGet getPlan(String planCode, int id) {
@@ -31,7 +32,7 @@ public class PlanApiClient extends BaseApiClient {
                        .statusCode(200)
                        .extract()
                        .body()
-                       .as(ResponseEndpointGet.class);
+                       .as(ResponseEndpointGet.class, ObjectMapperType.GSON);
     }
 
     public Response getPlanResponse(String planCode, int id) {
@@ -44,15 +45,15 @@ public class PlanApiClient extends BaseApiClient {
                        .statusCode(200)
                        .extract()
                        .body()
-                       .as(ResponseEndpointPost.class);
+                       .as(ResponseEndpointPost.class, ObjectMapperType.GSON);
     }
 
-    public ResponseEndpointAllGet getAllProject(String planCode) {
+    public ResponseEndpointAllGet getAllPlan(String planCode) {
         Response response = getAll(PLAN_URI_WITH_CODE, Map.of(PLAN_CODE, planCode), Map.of("limit", "10", "offset", "0"));
         return response.then()
                        .statusCode(200)
                        .extract()
                        .body()
-                       .as(ResponseEndpointAllGet.class);
+                       .as(ResponseEndpointAllGet.class, ObjectMapperType.GSON);
     }
 }

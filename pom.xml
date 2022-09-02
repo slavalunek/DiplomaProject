@@ -28,6 +28,7 @@
         <webdrivermanager.version>5.2.0</webdrivermanager.version>
         <selenium-java.version>4.2.2</selenium-java.version>
         <guava.version>31.0.1-jre</guava.version>
+        <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
     </properties>
 
     <dependencies>
@@ -138,20 +139,16 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
-                    <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                    </argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
                     <systemProperties>
                         <property>
                             <name>allure.results.directory</name>
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                     </systemProperties>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <failIfNoTests>true</failIfNoTests>
                 </configuration>
                 <dependencies>
                     <dependency>

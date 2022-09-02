@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="org.example.UI.utils.testng.AnnotationTransformer"/>
+        <listener class-name="org.example.UI.utils.testng.TestListener"/>
+    </listeners>
+    <test name="UI Tests">
+        <classes>
+            <class name="uiTest.AddCasesByFiltersTest"/>
+            <class name="uiTest.CreatePlanTest"/>
+        </classes>
+    </test>
+    <test name="UPI Tests">
+        <classes>
+            <class name="apiTest.PlanCrudTest"/>
+        </classes>
+    </test>
+</suite>

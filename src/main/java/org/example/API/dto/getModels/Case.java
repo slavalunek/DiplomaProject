@@ -13,6 +13,8 @@ import static lombok.AccessLevel.PRIVATE;
 @NoArgsConstructor
 @Builder
 public class Case {
-    public int case_id;
-    public Object assignee_id;
+    @SerializedName("case_id")
+    public int caseId;
+    @SerializedName("assignee_id")
+    public Object assigneeId;
 }

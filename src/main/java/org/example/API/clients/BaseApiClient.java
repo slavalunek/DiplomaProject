@@ -3,6 +3,7 @@ package org.example.API.clients;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.example.UI.utils.PropertiesLoader;
 
 import java.util.Map;
 
@@ -10,14 +11,16 @@ import static io.restassured.RestAssured.given;
 
 public class BaseApiClient {
 
+    private static final String TOKEN = "token";
+    private static final String BASE_URL = "base.uri";
     RequestSpecification rqSpec;
 
     public BaseApiClient() {
         rqSpec = given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
-                .header("token", "8eee9f600e10a105a1887b3397e7278d453f3f77")
-                .baseUri("https://api.qase.io")
+                .header(TOKEN, PropertiesLoader.loadProperties().getProperty(TOKEN))
+                .baseUri(PropertiesLoader.loadProperties().getProperty(BASE_URL))
                 .log().ifValidationFails();
     }
 

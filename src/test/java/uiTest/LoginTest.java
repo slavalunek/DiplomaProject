@@ -1,4 +1,4 @@
-package UITest;
+package uiTest;
 
 import org.example.UI.pages.LoginPage;
 import org.example.UI.utils.PropertiesLoader;

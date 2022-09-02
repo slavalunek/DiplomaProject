@@ -19,11 +19,15 @@ public class Result {
     public int id;
     public String title;
     public String description;
-    public int cases_count;
+    @SerializedName("cases_count")
+    public int casesCount;
     public String created;
     public String updated;
-    public String created_at;
-    public String updated_at;
-    public int average_time;
+    @SerializedName("created_at")
+    public String createdAt;
+    @SerializedName("updated_at")
+    public String updatedAt;
+    @SerializedName("average_time")
+    public int averageTime;
     public List<Case> cases;
 }

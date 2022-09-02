@@ -14,7 +14,7 @@ public class ProjectPage extends BasePage {
 
     @FindBy(xpath = "//h1[text()='Projects']")
     private WebElement projectsText;
-
+    By projectLocator = By.xpath("//h1[text()='Projects']");
     public ProjectPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -23,7 +23,6 @@ public class ProjectPage extends BasePage {
     @Override
     public boolean isPageOpened() {
         waitForPageLoaded();
-        By projectLocator = By.xpath("//h1[text()='Projects']");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(projectLocator));
             log.info("The page {} was opened successfully", "Home");
@@ -35,7 +34,6 @@ public class ProjectPage extends BasePage {
     }
 
     public boolean isProjectPageOpened() {
-        By projectLocator = By.xpath("//h1[text()='Projects']");
         wait.until(ExpectedConditions.visibilityOfElementLocated(projectLocator));
         return projectsText.isDisplayed();
     }

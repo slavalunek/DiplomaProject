@@ -1,4 +1,4 @@
-package UITest;
+package uiTest;
 
 import com.github.javafaker.Faker;
 import org.example.UI.dto.Plan;
