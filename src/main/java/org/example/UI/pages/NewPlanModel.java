@@ -44,4 +44,3 @@ public class NewPlanModel extends BasePage {
         return new TestPlansPage(driver);
     }
 }
-

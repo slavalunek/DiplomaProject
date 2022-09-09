@@ -57,7 +57,7 @@ public class CreatePlanTest extends BaseTest {
     }
 
     @AfterMethod
-    public void deletePlan(){
-        new PlanSteps(driver).deletePlan(title,DELETE);
+    public void deletePlan() {
+        new PlanSteps(driver).deletePlan(title, DELETE);
     }
 }

@@ -15,6 +15,7 @@ public class ProjectPage extends BasePage {
     @FindBy(xpath = "//h1[text()='Projects']")
     private WebElement projectsText;
     By projectLocator = By.xpath("//h1[text()='Projects']");
+
     public ProjectPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);

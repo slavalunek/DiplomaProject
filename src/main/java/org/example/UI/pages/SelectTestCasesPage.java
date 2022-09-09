@@ -82,6 +82,7 @@ public class SelectTestCasesPage extends BasePage {
         driver.findElement(levelSelection).click();
         return this;
     }
+
     public boolean isTheSelectionLevelIsConfirmed(String level) {
         By levelSelection = By.xpath(String.format("//div[@class='suitecase-params']//span[text()='%s']", level));
         wait.until(ExpectedConditions.visibilityOfElementLocated(levelSelection));

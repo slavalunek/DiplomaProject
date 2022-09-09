@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Smoke Test" parallel="classes" thread-count="2">
+<suite name="Plan Test" parallel="classes" thread-count="2">
     <listeners>
         <listener class-name="org.example.UI.utils.testng.AnnotationTransformer"/>
         <listener class-name="org.example.UI.utils.testng.TestListener"/>
@@ -9,6 +9,9 @@
         <classes>
             <class name="uiTest.AddCasesByFiltersTest"/>
             <class name="uiTest.CreatePlanTest"/>
+            <class name="uiTest.DeletePlanTest"/>
+            <class name="uiTest.EditPlanTest"/>
+            <class name="uiTest.LoginTest"/>
         </classes>
     </test>
     <test name="UPI Tests">

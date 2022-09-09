@@ -92,7 +92,7 @@ public class PlanCrudTest {
 
         List<Entity> entities = actualResponseEndpointGetAll.getResult().getEntities();
         assertThat(entities).filteredOn(entity -> entity.getId() == id)
-                .isEqualTo(entities);
+                            .isEqualTo(entities);
 
         deletePlan();
     }
@@ -102,7 +102,7 @@ public class PlanCrudTest {
         id = actualResponseEndpointPost.getResult().getId();
     }
 
-    public void deletePlan(){
+    public void deletePlan() {
         planApiClient.deletePlan(properties.getProperty(PROJECT), id);
     }
 }

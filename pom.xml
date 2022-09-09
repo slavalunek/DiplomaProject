@@ -29,6 +29,7 @@
         <selenium-java.version>4.2.2</selenium-java.version>
         <guava.version>31.0.1-jre</guava.version>
         <suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
+        <gson.version>2.9.1</gson.version>
     </properties>
 
     <dependencies>
@@ -100,7 +101,7 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.9.1</version>
+            <version>${gson.version}</version>
         </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -118,7 +119,6 @@
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
         </dependency>
-
 
     </dependencies>
 

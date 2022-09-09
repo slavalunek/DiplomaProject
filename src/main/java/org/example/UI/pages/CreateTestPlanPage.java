@@ -1,6 +1,5 @@
 package org.example.UI.pages;
 
-import com.github.javafaker.Faker;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -51,14 +50,8 @@ public class CreateTestPlanPage extends BasePage {
         return this;
     }
 
-    public SelectTestCasesPage clickAddCasesBtn() {
-        addCasesBtn.click();
-        return new SelectTestCasesPage(driver);
-    }
-
     public TestPlansPage clickCreatePlanBtn() {
         createPlanBtn.click();
         return new TestPlansPage(driver);
     }
-
 }

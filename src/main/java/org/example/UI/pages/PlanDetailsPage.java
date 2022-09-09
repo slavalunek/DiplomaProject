@@ -42,11 +42,6 @@ public class PlanDetailsPage extends BasePage{
         return this;
     }
 
-    public PlanDetailsPage openTestCases() {
-        driver.findElement(By.id("tab-test-cases")).click();
-        return this;
-    }
-
     public Plan getPlanDetails() {
         Plan plan = Plan.builder()
                 .fieldTitle(getPlanTitle())

@@ -58,7 +58,7 @@ public class BaseApiClient {
                       .response();
     }
 
-    public Response getAll(String uri,Map<String, ?> pathParamsNameValuePairs, Map<String, ?> queryParamsNameValuePairs) {
+    public Response getAll(String uri, Map<String, ?> pathParamsNameValuePairs, Map<String, ?> queryParamsNameValuePairs) {
         return given().spec(rqSpec)
                       .pathParams(pathParamsNameValuePairs)
                       .queryParams(queryParamsNameValuePairs)

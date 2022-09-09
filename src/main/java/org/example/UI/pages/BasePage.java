@@ -1,13 +1,11 @@
 package org.example.UI.pages;
 
-import org.example.UI.utils.PropertiesLoader;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Properties;
 
 public abstract class BasePage {
 
@@ -16,7 +14,6 @@ public abstract class BasePage {
     public static final String EDITE = "Edit";
     WebDriver driver;
     WebDriverWait wait;
-    String baseUrl = "https://app.qase.io/";
 
     public BasePage(WebDriver driver) {
         this.driver = driver;

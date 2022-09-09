@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.Properties;
 
 @Log4j2
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
     @FindBy(id = "inputEmail")
     private WebElement userEmailInput;
@@ -35,10 +35,10 @@ public class LoginPage extends BasePage{
         By accountsLocator = By.id("Symbols");
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(accountsLocator));
-            log.info("The page {} was opened successfully","Home");
+            log.info("The page {} was opened successfully", "Home");
             return true;
         } catch (TimeoutException e) {
-            log.info("The page {} was not opened because of error: {}","Login",e.getMessage());
+            log.info("The page {} was not opened because of error: {}", "Login", e.getMessage());
             return false;
         }
     }
