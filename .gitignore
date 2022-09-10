@@ -4,4 +4,3 @@
 *.iws
 # Maven
 /target/
-src/main/java/org/example/main.java
