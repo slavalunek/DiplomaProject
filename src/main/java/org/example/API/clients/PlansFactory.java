@@ -9,8 +9,8 @@ import org.example.API.dto.postModels.ResponseEndpointPost;
 import org.example.API.dto.postModels.Result;
 import org.example.UI.utils.PropertiesLoader;
 
-import java.text.*;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -22,10 +22,6 @@ public class PlansFactory {
     String description = faker.name().title();
     PlanApiClient planApiClient = new PlanApiClient();
     Properties properties = PropertiesLoader.loadProperties();
-
-
-    public PlansFactory() throws ParseException {
-    }
 
     public PlanDetailsModel prepareBodyPlanPost() {
         return PlanDetailsModel.builder()
@@ -41,14 +37,7 @@ public class PlansFactory {
                                                  .id(id).build()).build();
     }
 
-    public ResponseEndpointPost prepareDeletePlanResponse(int id) {
-        return ResponseEndpointPost.builder()
-                                   .status(true)
-                                   .result(Result.builder()
-                                                 .id(id).build()).build();
-    }
-
-    public ResponseEndpointGet prepareGetPlanResponse(int id, String created, String updated, String created_at, String updated_at) {
+    public ResponseEndpointGet prepareGetPlanResponse(int id, String created, String updated, Date created_at, Date updated_at) {
         return ResponseEndpointGet.builder()
                                   .status(true)
                                   .result(org.example.API.dto.getModels.Result.builder()

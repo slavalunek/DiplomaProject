@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 import static lombok.AccessLevel.PRIVATE;
@@ -24,9 +25,9 @@ public class Result {
     public String created;
     public String updated;
     @SerializedName("created_at")
-    public String createdAt;
+    public Date createdAt;
     @SerializedName("updated_at")
-    public String updatedAt;
+    public Date updatedAt;
     @SerializedName("average_time")
     public int averageTime;
     public List<Case> cases;

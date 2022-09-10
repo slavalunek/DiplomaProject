@@ -48,7 +48,7 @@ public class PlanApiClient extends BaseApiClient {
                        .as(ResponseEndpointPost.class, ObjectMapperType.GSON);
     }
 
-    public ResponseEndpointAllGet getAllPlan(String planCode) {
+    public ResponseEndpointAllGet getAllPlans(String planCode) {
         Response response = getAll(PLAN_URI_WITH_CODE, Map.of(PLAN_CODE, planCode), Map.of("limit", "10", "offset", "0"));
         return response.then()
                        .statusCode(200)
